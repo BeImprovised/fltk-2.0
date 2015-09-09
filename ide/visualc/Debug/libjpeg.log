@@ -1,0 +1,74 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (boxtype.vcxproj, checkers.vcxproj, color_chooser.vcxproj, CubeView.vcxproj, cursor.vcxproj, demo.vcxproj, editor.vcxproj, file_chooser.vcxproj, fonts.vcxproj, hello.vcxproj, image.vcxproj, input.vcxproj, label.vcxproj, libpng.vcxproj, pack.vcxproj, qubix.vcxproj, tile.vcxproj, zlib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  jcapimin.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcapimin.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcapistd.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcapistd.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jccoefct.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jccoefct.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jccolor.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jccolor.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcdctmgr.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcdctmgr.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jchuff.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jchuff.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcinit.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcinit.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcmainct.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcmainct.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcmarker.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcmarker.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcmaster.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jcmaster.c : fatal error C1041: cannot open program database 'd:\working\fltk\fltk-2.0\ide\visualc\debug\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  jcomapi.c
+  jcparam.c
+  jcphuff.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\libjpeg\jcphuff.c': No such file or directory
+  jcprepct.c
+  jcsample.c
+  jctrans.c
+  jdapimin.c
+  jdapistd.c
+  jdatadst.c
+  jdatasrc.c
+  Generating Code...
+  Compiling...
+  jdcoefct.c
+  jdcolor.c
+  jddctmgr.c
+  jdhuff.c
+  jdinput.c
+  jdmainct.c
+  jdmarker.c
+  jdmaster.c
+  jdmerge.c
+  jdphuff.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\libjpeg\jdphuff.c': No such file or directory
+  jdpostct.c
+  jdsample.c
+  jdtrans.c
+  jerror.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jerror.c(193): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+d:\working\fltk\fltk-2.0\images\libjpeg\jerror.c(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+  jfdctflt.c
+  jfdctfst.c
+  jfdctint.c
+  jidctflt.c
+  jidctfst.c
+  jidctint.c
+  Generating Code...
+  Compiling...
+  jidctred.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\libjpeg\jidctred.c': No such file or directory
+  jmemmgr.c
+d:\working\fltk\fltk-2.0\images\libjpeg\jmemmgr.c(1106): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(462) : see declaration of 'getenv'
+d:\working\fltk\fltk-2.0\images\libjpeg\jmemmgr.c(1109): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
+  jmemnobs.c
+  jquant1.c
+  jquant2.c
+  jutils.c
+  Generating Code...

@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (.\fltkd\) contains files shared from another project (fltk.vcxproj, fltk_images.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  gl_start.cxx
+  gl_draw.cxx
+  Fl_Gl_Window.cxx
+  Fl_Gl_Overlay.cxx
+  Fl_Gl_Choice.cxx
+  glut_compatability.cxx
+  Generating Code...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(D:\working\fltk\fltk-2.0\ide\visualc\.\fltkd\fltk_opengl.lib) does not match the Library's OutputFile property value (D:\working\fltk\fltk-2.0\lib\fltk2_gld.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(fltk_opengl) does not match the Library's OutputFile property value (fltk2_gld). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  fltk_opengl.vcxproj -> D:\working\fltk\fltk-2.0\ide\visualc\.\fltkd\fltk_opengl.lib

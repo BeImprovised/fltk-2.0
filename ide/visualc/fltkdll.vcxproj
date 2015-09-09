@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release MinSize|Win32">
+      <Configuration>Release MinSize</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{026FDD8E-4DC0-4B28-A2F3-E028DC5C5D1A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MinSize|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release MinSize|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\lib\</OutDir>
+    <IntDir>.\fltkdlld\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MinSize|Win32'">
+    <OutDir>.\..\..\lib\</OutDir>
+    <IntDir>.\fltkdll___Win32_Release_MinSize\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\lib\</OutDir>
+    <IntDir>.\fltkdll\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.;../..;../../fltk/compat;../visualc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;FL_SHARED;FL_LIBRARY;FL_GL_LIBRARY;FL_GLUT_LIBRARY;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRA_LEAN;WIN32_EXTRA_LEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\fltkdlld\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\fltkdlld\fltkdll.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\fltkdlld\</ObjectFileName>
+      <ProgramDataBaseFileName>.\fltkdlld\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\lib\fltkdll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\lib\fltkdll.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libcd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\lib\fltk2dlld.dll</OutputFile>
+      <ImportLibrary>.\..\..\lib\fltk2dlld.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;ws2_32.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>2.0</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MinSize|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MinSpace</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>.;../..;../../fltk/compat;../visualc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;FL_SHARED;FL_LIBRARY;FL_GL_LIBRARY;FL_GLUT_LIBRARY;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRA_LEAN;WIN32_EXTRA_LEAN;_MSC_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\fltkdll___Win32_Release_MinSize\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\fltkdll___Win32_Release_MinSize\fltkdll.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\fltkdll___Win32_Release_MinSize\</ObjectFileName>
+      <ProgramDataBaseFileName>.\fltkdll___Win32_Release_MinSize\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\lib\fltkdll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\lib\fltkdll.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\lib\fltk2dll.dll</OutputFile>
+      <ImportLibrary>.\..\..\lib\fltk2dll.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;ws2_32.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>2.0</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>.;../..;../../fltk/compat;../visualc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;FL_SHARED;FL_LIBRARY;FL_GL_LIBRARY;FL_GLUT_LIBRARY;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRA_LEAN;WIN32_EXTRA_LEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\fltkdll\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\fltkdll\fltkdll.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\fltkdll\</ObjectFileName>
+      <ProgramDataBaseFileName>.\fltkdll\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\lib\fltkdll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\lib\fltkdll.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\lib\fltk2dll.dll</OutputFile>
+      <ImportLibrary>.\..\..\lib\fltk2dll.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;ws2_32.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>2.0</Version>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\addarc.cxx" />
+    <ClCompile Include="..\..\src\addcurve.cxx" />
+    <ClCompile Include="..\..\src\add_idle.cxx" />
+    <ClCompile Include="..\..\src\Adjuster.cxx" />
+    <ClCompile Include="..\..\src\AlignGroup.cxx" />
+    <ClCompile Include="..\..\src\args.cxx" />
+    <ClCompile Include="..\..\src\BarGroup.cxx" />
+    <ClCompile Include="..\..\src\bmpImage.cxx" />
+    <ClCompile Include="..\..\src\Browser.cxx" />
+    <ClCompile Include="..\..\src\Button.cxx" />
+    <ClCompile Include="..\..\src\CheckButton.cxx" />
+    <ClCompile Include="..\..\src\Choice.cxx" />
+    <ClCompile Include="..\..\src\clip.cxx" />
+    <ClCompile Include="..\..\src\Clock.cxx" />
+    <ClCompile Include="..\..\src\Color.cxx" />
+    <ClCompile Include="..\..\src\color_chooser.cxx" />
+    <ClCompile Include="..\..\src\ComboBox.cxx" />
+    <ClCompile Include="..\..\src\compose.cxx" />
+    <ClCompile Include="..\..\src\Cursor.cxx" />
+    <ClCompile Include="..\..\src\CycleButton.cxx" />
+    <ClCompile Include="..\..\src\default_glyph.cxx" />
+    <ClCompile Include="..\..\src\Dial.cxx" />
+    <ClCompile Include="..\..\src\DiamondBox.cxx" />
+    <ClCompile Include="..\..\src\dnd.cxx" />
+    <ClCompile Include="..\..\src\drawtext.cxx" />
+    <ClCompile Include="..\..\src\dump_compose.c" />
+    <ClCompile Include="..\..\src\EngravedLabel.cxx" />
+    <ClCompile Include="..\..\src\error.cxx" />
+    <ClCompile Include="..\..\src\event_key_state.cxx" />
+    <ClCompile Include="..\..\src\FileBrowser.cxx" />
+    <ClCompile Include="..\..\src\FileChooser.cxx" />
+    <ClCompile Include="..\..\src\FileChooser2.cxx" />
+    <ClCompile Include="..\..\src\FileIcon.cxx" />
+    <ClCompile Include="..\..\src\FileInput.cxx" />
+    <ClCompile Include="..\..\src\filename_absolute.cxx" />
+    <ClCompile Include="..\..\src\filename_ext.cxx" />
+    <ClCompile Include="..\..\src\filename_isdir.cxx" />
+    <ClCompile Include="..\..\src\filename_list.cxx" />
+    <ClCompile Include="..\..\src\filename_match.cxx" />
+    <ClCompile Include="..\..\src\filename_name.cxx" />
+    <ClCompile Include="..\..\src\file_chooser.cxx" />
+    <ClCompile Include="..\..\src\fillrect.cxx" />
+    <ClCompile Include="..\..\src\FloatInput.cxx" />
+    <ClCompile Include="..\..\src\fltk_theme.cxx" />
+    <ClCompile Include="..\..\src\Fl_Menu_Item.cxx" />
+    <ClCompile Include="..\..\src\Font.cxx" />
+    <ClCompile Include="..\..\src\gifImage.cxx" />
+    <ClCompile Include="..\..\src\Group.cxx" />
+    <ClCompile Include="..\..\src\GSave.cxx" />
+    <ClCompile Include="..\..\src\HelpView.cxx" />
+    <ClCompile Include="..\..\src\HighlightButton.cxx" />
+    <ClCompile Include="..\..\src\Image.cxx" />
+    <ClCompile Include="..\..\src\Input.cxx" />
+    <ClCompile Include="..\..\src\InputBrowser.cxx" />
+    <ClCompile Include="..\..\src\InvisibleWidget.cxx" />
+    <ClCompile Include="..\..\src\Item.cxx" />
+    <ClCompile Include="..\..\src\key_name.cxx" />
+    <ClCompile Include="..\..\src\LightButton.cxx" />
+    <ClCompile Include="..\..\src\list_fonts.cxx" />
+    <ClCompile Include="..\..\src\load_plugin.cxx" />
+    <ClCompile Include="..\..\src\lock.cxx" />
+    <ClCompile Include="..\..\src\Menu.cxx" />
+    <ClCompile Include="..\..\src\MenuBar.cxx" />
+    <ClCompile Include="..\..\src\MenuWindow.cxx" />
+    <ClCompile Include="..\..\src\Menu_add.cxx" />
+    <ClCompile Include="..\..\src\Menu_global.cxx" />
+    <ClCompile Include="..\..\src\Menu_popup.cxx" />
+    <ClCompile Include="..\..\src\message.cxx" />
+    <ClCompile Include="..\..\src\MultiImage.cxx" />
+    <ClCompile Include="..\..\src\NumericInput.cxx" />
+    <ClCompile Include="..\..\src\numericsort.cxx" />
+    <ClCompile Include="..\..\src\Output.cxx" />
+    <ClCompile Include="..\..\src\OvalBox.cxx" />
+    <ClCompile Include="..\..\src\overlay_rect.cxx" />
+    <ClCompile Include="..\..\src\own_colormap.cxx" />
+    <ClCompile Include="..\..\src\PackedGroup.cxx" />
+    <ClCompile Include="..\..\src\path.cxx" />
+    <ClCompile Include="..\..\src\PlasticBox.cxx" />
+    <ClCompile Include="..\..\src\PopupMenu.cxx" />
+    <ClCompile Include="..\..\src\Preferences.cxx" />
+    <ClCompile Include="..\..\src\ProgressBar.cxx" />
+    <ClCompile Include="..\..\src\RadioButton.cxx" />
+    <ClCompile Include="..\..\src\readimage.cxx" />
+    <ClCompile Include="..\..\src\RepeatButton.cxx" />
+    <ClCompile Include="..\..\src\ReturnButton.cxx" />
+    <ClCompile Include="..\..\src\RoundBox.cxx" />
+    <ClCompile Include="..\..\src\RoundedBox.cxx" />
+    <ClCompile Include="..\..\src\run.cxx" />
+    <ClCompile Include="..\..\src\scandir.c" />
+    <ClCompile Include="..\..\src\Scrollbar.cxx" />
+    <ClCompile Include="..\..\src\ScrollGroup.cxx" />
+    <ClCompile Include="..\..\src\scrollrect.cxx" />
+    <ClCompile Include="..\..\src\setcolor.cxx" />
+    <ClCompile Include="..\..\src\setdisplay.cxx" />
+    <ClCompile Include="..\..\src\setvisual.cxx" />
+    <ClCompile Include="..\..\src\ShadowBox.cxx" />
+    <ClCompile Include="..\..\src\ShapedWindow.cxx" />
+    <ClCompile Include="..\..\src\SharedImage.cxx" />
+    <ClCompile Include="..\..\src\ShortcutAssignment.cxx" />
+    <ClCompile Include="..\..\src\show_colormap.cxx" />
+    <ClCompile Include="..\..\src\Slider.cxx" />
+    <ClCompile Include="..\..\src\StatusBarGroup.cxx" />
+    <ClCompile Include="..\..\src\string.c" />
+    <ClCompile Include="..\..\src\StringList.cxx" />
+    <ClCompile Include="..\..\src\Style.cxx" />
+    <ClCompile Include="..\..\src\StyleSet.cxx" />
+    <ClCompile Include="..\..\src\Symbol.cxx" />
+    <ClCompile Include="..\..\src\TabGroup.cxx" />
+    <ClCompile Include="..\..\src\TabGroup2.cxx" />
+    <ClCompile Include="..\..\src\TextBuffer.cxx" />
+    <ClCompile Include="..\..\src\TextDisplay.cxx" />
+    <ClCompile Include="..\..\src\TextEditor.cxx" />
+    <ClCompile Include="..\..\src\ThumbWheel.cxx" />
+    <ClCompile Include="..\..\src\TiledGroup.cxx" />
+    <ClCompile Include="..\..\src\TiledImage.cxx" />
+    <ClCompile Include="..\..\src\Tooltip.cxx" />
+    <ClCompile Include="..\..\src\UpBox.cxx" />
+    <ClCompile Include="..\..\src\utf.c" />
+    <ClCompile Include="..\..\src\Valuator.cxx" />
+    <ClCompile Include="..\..\src\ValueInput.cxx" />
+    <ClCompile Include="..\..\src\ValueOutput.cxx" />
+    <ClCompile Include="..\..\src\ValueSlider.cxx" />
+    <ClCompile Include="..\..\src\vsnprintf.c" />
+    <ClCompile Include="..\..\src\Widget.cxx" />
+    <ClCompile Include="..\..\src\Widget_draw.cxx" />
+    <ClCompile Include="..\..\src\win32\WinMain.cxx" />
+    <ClCompile Include="..\..\src\Window.cxx" />
+    <ClCompile Include="..\..\src\Window_fullscreen.cxx" />
+    <ClCompile Include="..\..\src\Window_hotspot.cxx" />
+    <ClCompile Include="..\..\src\Window_iconize.cxx" />
+    <ClCompile Include="..\..\src\WizardGroup.cxx" />
+    <ClCompile Include="..\..\src\xbmImage.cxx" />
+    <ClCompile Include="..\..\src\xpmImage.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\array.h" />
+    <ClInclude Include="..\..\src\colormap.h" />
+    <ClInclude Include="..\..\src\fastarrow.h" />
+    <ClInclude Include="..\..\src\mediumarrow.h" />
+    <ClInclude Include="..\..\src\slowarrow.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

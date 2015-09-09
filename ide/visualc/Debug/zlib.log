@@ -1,0 +1,21 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (boxtype.vcxproj, checkers.vcxproj, color_chooser.vcxproj, CubeView.vcxproj, cursor.vcxproj, demo.vcxproj, editor.vcxproj, file_chooser.vcxproj, fonts.vcxproj, hello.vcxproj, image.vcxproj, input.vcxproj, label.vcxproj, libjpeg.vcxproj, libpng.vcxproj, pack.vcxproj, qubix.vcxproj, tile.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  zutil.c
+  uncompr.c
+  trees.c
+  infutil.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\zlib\infutil.c': No such file or directory
+  inftrees.c
+  inflate.c
+  inffast.c
+  infcodes.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\zlib\infcodes.c': No such file or directory
+  infblock.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\zlib\infblock.c': No such file or directory
+  gzio.c
+c1 : fatal error C1083: Cannot open source file: '..\..\images\zlib\gzio.c': No such file or directory
+  deflate.c
+  crc32.c
+  compress.c
+  adler32.c
+  Generating Code...
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
